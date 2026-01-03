@@ -8,20 +8,21 @@ const About = () => {
             <Navigation />
             
             {/* Main Content Area */}
-            <div className="ml-64 min-h-screen">
+            <div className="pt-24 md:pt-28 min-h-screen">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Hero Section */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="pt-20 pb-12 px-8"
+                    className="pb-12"
                 >
                     <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">About Us</h1>
                     <p className="text-xl text-gray-600">Discover the Story Behind Taram Engineering's Excellence</p>
                 </motion.section>
 
-            {/* Mission Section */}
-            <section className="px-8 py-8">
+            {/* Company Background Section */}
+            <section className="py-8">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -33,74 +34,109 @@ const About = () => {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold mb-6 text-gray-900"
                     >
-                        Our Mission
+                        Our Story
                     </motion.h2>
-                    <motion.p
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-lg text-gray-600 leading-relaxed mb-8"
+                        className="text-lg text-gray-600 leading-relaxed mb-8 space-y-4"
                     >
-                        To become the <span className="text-yellow-300 font-bold">most valued Partner</span> for Customers around the world in Mechanical Engineering 
-                        Design and Manufacture at <span className="text-pink-300 font-bold">competitive cost</span> and with <span className="text-purple-300 font-bold">highest Quality Standards</span>.
-                    </motion.p>
-                    
-                    <motion.h3
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-2xl font-bold mb-4 text-white"
-                    >
-                        🌟 Who We Are
-                    </motion.h3>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-lg leading-relaxed text-gray-600"
-                    >
-                        Taram Engineering stands as a <span className="text-blue-300 font-bold">pioneering force</span> in mechanical engineering design and manufacturing services. 
-                        With <span className="text-indigo-300 font-bold">over a decade of exceptional experience</span>, we have carved our niche as a trusted, reliable partner 
-                        for industry leaders across diverse sectors including Railways, Defence, Aviation, Automotive, and beyond.
-                    </motion.p>
+                        <p>
+                            Taram was established in the year <span className="font-bold text-gray-900">1995</span> by a group of Engineering/Finance professionals having 
+                            <span className="font-semibold text-gray-800"> two decades of work experience</span> from Industry leaders like TVS, Caterpillar, Fenner, Essar, BPL Mobile, Axis Aerospace, etc.
+                        </p>
+                        <p>
+                            Taram's core competency of <span className="font-semibold text-gray-800">mechanical engineering</span> has been nursed and brought to maturity by the 
+                            tireless efforts of the management team aided by skilled production team.
+                        </p>
+                    </motion.div>
                 </motion.div>
             </section>
 
-            {/* Values Section */}
-            <section className="px-8 py-8">
+
+            {/* Promoters Section */}
+            <section className="py-8">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold mb-8 text-gray-900"
+                    className="text-3xl md:text-4xl font-bold mb-8 text-gray-900"
                 >
-                    Our Core Values
+                    Our Promoters
                 </motion.h2>
-                <div className="space-y-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {[
-                        { title: 'Quality Excellence', desc: 'Uncompromising commitment to quality in every project', icon: '🎯' },
-                        { title: 'True Partnership', desc: 'Building lasting relationships with our clients', icon: '🤝' },
-                        { title: 'Innovation First', desc: 'Continuous improvement and technological advancement', icon: '💡' }
-                    ].map((value, index) => (
+                        {
+                            name: 'P.M. Vasudevan',
+                            initials: 'P.M.V',
+                            title: 'Mechanical Engineer',
+                            qualification: 'Mechanical Engineer from Madras University',
+                            experience: '25 years experience',
+                            background: 'Has specialized and instrumental in establishing Supply Chain Management.',
+                            companies: 'CMTI, TVS, L&T and HPL',
+                            industries: 'Automotive, Light/Heavy Engineering Industries'
+                        },
+                        {
+                            name: 'R. Karthikeyan',
+                            initials: 'R.K',
+                            title: 'Chartered Accountant',
+                            qualification: 'Chartered Accountant',
+                            experience: '25 years experience',
+                            background: 'Specialist in Project finance and Treasury management. Instrumental in establishing various new projects and Resourcing of same.',
+                            companies: 'Sundaram Clayton, Fenner, WIMCO, Essar Steel and Axis Aerospace & Technologies Private Limited',
+                            industries: 'Director of Axis Aerospace & Technologies Private Limited'
+                        },
+                        {
+                            name: 'A. Balasubramanian',
+                            initials: 'A.B',
+                            title: 'Cost Accountant',
+                            qualification: 'Qualified Cost Accountant',
+                            experience: '30 years experience',
+                            background: 'Acknowledged for Costing/Systems and Administration.',
+                            companies: 'TVS, Fenner, SIMCO Meters and National Rayon',
+                            industries: 'Engineering field'
+                        }
+                    ].map((promoter, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="py-6 border-b border-gray-200 hover:bg-gray-50 transition-colors"
+                            transition={{ delay: index * 0.2, duration: 0.5 }}
+                            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                            className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow"
                         >
-                            <div className="flex items-start space-x-4">
-                                <div className="text-4xl flex-shrink-0">{value.icon}</div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{value.title}</h3>
-                                    <p className="text-gray-600">{value.desc}</p>
+                            <div className="mb-4">
+                                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">
+                                    {promoter.initials}
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-2">{promoter.name}</h3>
+                                <p className="text-lg font-semibold text-blue-600 mb-2">{promoter.title}</p>
+                                <p className="text-sm text-gray-600 mb-3">{promoter.qualification}</p>
+                            </div>
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-gray-700">
+                                        <span className="font-semibold">{promoter.experience}</span> in {promoter.industries}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-600 mb-2">
+                                        <span className="font-semibold text-gray-700">Worked in:</span> {promoter.companies}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        {promoter.background}
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </section>
+                </div>
 
                 <Footer />
             </div>

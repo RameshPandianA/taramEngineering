@@ -12,7 +12,7 @@ const Footer = () => {
       }}
     >
       <p className="text-sm text-gray-600 text-center">
-        © Taram Engineering - Taram.in | Powered by WEBEM | Best view with resolution 1024*768.
+        © Taram Engineering - Taram.in | Powered by TARAM | Website by IVAGAR - Ivagar.com.
       </p>
     </motion.footer>
   );

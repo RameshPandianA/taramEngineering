@@ -5,11 +5,13 @@ import Products from "./pages/products";
 import Facilities from "./pages/facilities";
 import Customers from "./pages/customers";
 import Contact from "./pages/contact";
+import ScrollToTop from "./components/ScrollToTop";
 import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

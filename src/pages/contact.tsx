@@ -7,15 +7,16 @@ const Contact = () => {
             <Navigation />
             
             {/* Main Content Area */}
-            <div className="ml-64 min-h-screen">
+            <div className="pt-24 md:pt-28 min-h-screen">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Hero Section */}
-                <section className="pt-20 pb-12 px-8">
+                <section className="pb-12">
                     <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">Contact Us</h1>
                     <p className="text-xl text-gray-600">Let's Start a Conversation - Your Engineering Partner Awaits</p>
                 </section>
 
                 {/* Contact Section */}
-                <section className="px-8 py-8">
+                <section className="py-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
                         <div>
@@ -91,19 +92,19 @@ const Contact = () => {
                                     </p>
                                 </div>
 
-                                <div className="p-6 rounded-xl border border-gray-700 bg-gray-800/50">
+                                <div className="p-6 rounded-xl border border-gray-200 bg-gray-50">
                                     <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Information</h3>
                                     <div className="space-y-3">
                                         <p className="text-gray-600">
                                             <span className="font-bold">Email:</span> info@taram.in
                                         </p>
-                                        <p className="text-gray-300">
+                                        <p className="text-gray-600">
                                             <span className="font-bold">Website:</span> www.taram.in
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="p-6 rounded-xl border border-gray-700 bg-gray-800/50">
+                                <div className="p-6 rounded-xl border border-gray-200 bg-gray-50">
                                     <h3 className="text-xl font-bold mb-4 text-gray-900">Business Hours</h3>
                                     <p className="leading-relaxed text-gray-600">
                                         Monday - Friday: 9:00 AM - 6:00 PM<br />
@@ -112,7 +113,7 @@ const Contact = () => {
                                     </p>
                                 </div>
 
-                                <div className="p-6 rounded-xl border border-gray-700 bg-gray-800/50">
+                                <div className="p-6 rounded-xl border border-gray-200 bg-gray-50">
                                     <h3 className="text-xl font-bold mb-4 text-gray-900">Why Choose Us?</h3>
                                     <ul className="space-y-2">
                                         {[
@@ -132,6 +133,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </section>
+                </div>
 
                 <Footer />
             </div>
